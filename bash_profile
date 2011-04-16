@@ -1,0 +1,1 @@
+/Users/scott/.bash_profile
