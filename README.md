@@ -2,16 +2,17 @@
 
 ## Repository for various dotfiles.
 
-Each file is symlinked to a Git repository on my system and pushed to GitHub. There are several methods for adding dotfiles to a repository. If you are unsure of how to go about getting your dotfiles in version control, here is my process.
+Each file is symlinked from a Git repository on my system to the right location in my home directory and pushed to GitHub. There are several methods for adding dotfiles to a repository. If you are unsure of how to go about getting your dotfiles in version control, here is my process.
 
-In a directory that sits in my home directory where I keep source files; Rails, jQuery, etc. I created a dotfiles directory and added symlinks for the files I wanted to track.
+I moved my files, currently vimrc and bash_profile, to a directory in my home directory where I keep source repositories; Rails, jQuery, etc I then symlinked them back to their original location and pushed the repo to GitHub.
 
-Cd into the directory and run
 
-    ln -s ~/.vimrc vimrc
-    ln -s ~/.bash_profile bash_profile
+*Cd into the directory and run*
 
-Set up the repository
+    mv ~/.vimrc .
+    mv ~/.bash_profile
+
+*Set up the repository*
 
     git init
     git add .
@@ -19,3 +20,8 @@ Set up the repository
 
 Assuming you have a GitHub repository setup, push to GitHub.
 
+*Make sure you symlink your files back to where they should be.*
+
+    cd ~
+    ln -s ~/.vimrc .vimrc
+    ln -s ~/.bash_profile .bash_profile
