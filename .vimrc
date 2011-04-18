@@ -60,9 +60,15 @@ autocmd User Rails.view.rhtml*    set ft=rails.html
 set wildmode=list:longest
 
 " Key bindings
+" insert
 imap ,< <%=  %><Esc>2hi
 imap ,<! <Esc>I<!--<Esc>A--><Esc>
+imap # #{}<Esc>hi
 
+
+map <Leader>nt :NERDTree
+map <Leader>ntc :NERDTreeClose
+map <Leader>tn :tab new
 
 " Lusty Explorer fix, as described in the warning message
 set hidden
