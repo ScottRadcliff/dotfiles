@@ -1,13 +1,26 @@
+" pathogen bundles
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 syntax on
 set number
 set cursorline
 
-" theme
-" colorscheme dusk 
-colorscheme twilight
+" Hide the menu bar and set the theme if in GUI
+if has("gui_running")
+  " Hide menu bar
+  set guioptions=egmrt
+  " theme
+  set t_Co=256
+  colorscheme solarized
+  set background=dark
+endif
+
+
 " Text
-" set gfn=Consolas:h14
+set gfn=Monaco:h12
 set shell=/bin/bash
+set cmdheight=5
 set nowrap
 setlocal spell spelllang=en_us
 
@@ -60,16 +73,18 @@ autocmd User Rails.view.rhtml*    set ft=rails.html
 set wildmode=list:longest
 
 " Key bindings
-" insert
 imap ,< <%=  %><Esc>2hi
 imap ,<! <Esc>I<!--<Esc>A--><Esc>
-imap # #{}<Esc>hi
-
-
-map <Leader>nt :NERDTree
-map <Leader>ntc :NERDTreeClose
-map <Leader>tn :tab new
+imap <Leader># #{}<Esc>hi
+imap <Leader><Tab> <c-n>
+imap ,l logger.info "###### "<Esc>1hi
+map ,n :NERDTree
+map ,nn :NERDTreeClose<Enter>
+map <Leader>ff :FufFile<Enter>
+map <Leader>fb :FufBuffer<Enter>
+map <Leader>t :tab new<Enter>
 
 " Lusty Explorer fix, as described in the warning message
-set hidden
-let g:LustyExplorerSuppressRubyWarning = 1
+"set hidden
+"let g:LustyExplorerSuppressRubyWarning = 1
+
