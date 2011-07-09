@@ -39,6 +39,7 @@ set shiftwidth=2
 
 " Searching
 set incsearch
+set ic " Ignore case when searching
 
 " Matching braces
 set showmatch
@@ -73,18 +74,32 @@ autocmd User Rails.view.rhtml*    set ft=rails.html
 set wildmode=list:longest
 
 " Key bindings
-imap ,< <%=  %><Esc>2hi
 imap ,<! <Esc>I<!--<Esc>A--><Esc>
 imap <Leader># #{}<Esc>hi
 imap <Leader><Tab> <c-n>
+
+" Rails
 imap ,l logger.info "###### "<Esc>1hi
+imap ,i <%= debug  %><Esc>2hi
+map <Leader>end i<% end %><Esc>
+
+" Nerd Tree
 map ,n :NERDTree
 map ,nn :NERDTreeClose<Enter>
+
+" Fuzzy Finder
 map <Leader>ff :FufFile<Enter>
 map <Leader>fb :FufBuffer<Enter>
 map <Leader>t :tab new<Enter>
 
+
+
+" Git
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
 " Lusty Explorer fix, as described in the warning message
 "set hidden
 "let g:LustyExplorerSuppressRubyWarning = 1
+
+
 
