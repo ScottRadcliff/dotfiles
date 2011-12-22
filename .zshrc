@@ -68,7 +68,6 @@ PROMPT=' %F{blue}%1d%{$reset_color%}${vcs_info_msg_0_}%F{blue}%(?/%F{blue}/%F{re
 alias nginx='sudo /opt/nginx/sbin/nginx'
 alias ss='script/server'
 alias sc='script/console'
-alias gl='git log'
 alias cs='cap staging deploy'
 alias gps='git push github staging'
 alias rs='rails server'
@@ -85,7 +84,7 @@ alias gs='git status'
 alias gb='git branch'
 alias gd='git diff --color'
 alias ga='git add .'
-
+alias gl='git log -n 20 --oneline --color'
 
 # RVM
 alias rvm187='rvm use 1.8.7-p334'
