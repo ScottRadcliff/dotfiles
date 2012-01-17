@@ -72,11 +72,11 @@ alias cs='cap staging deploy'
 alias gps='git push github staging'
 alias rs='rails server'
 alias be='bundle exec'
-
+alias restart='touch tmp/restart.txt'
 
 # GIT
 alias gp='git pull'
-alias push-gh='git push github master'
+alias pgh='git push github master'
 alias gc='git commit'
 alias gco='git checkout'
 alias ge='git commit -am "Quick commit, nothing to see here."' # Git commit - needs to be refactored to allow a message to be passed
@@ -85,13 +85,17 @@ alias gb='git branch'
 alias gd='git diff --color'
 alias ga='git add .'
 alias gl='git log -n 20 --oneline --color'
+alias gm='git merge'
+
 
 # RVM
-alias rvm187='rvm use 1.8.7-p334'
+alias rvm187='rvm use 1.8.7@rev'
 
 # Mongo
-alias mongo='~/data/mongo/bin/mongod '
-alias mongo_shell="~/data/mongo/bin/mongo"
+#alias mongo='~/data/mongo/bin/mongod '
+#alias mongo_shell="~/data/mongo/bin/mongo"
+alias mongo='sudo /usr/local/Cellar/mongodb/2.0.2-x86_64/bin/mongod'
+alias mongo_shell='sudo /usr/local/Cellar/mongodb/2.0.2-x86_64/bin/mongo'
 
 
 # Nginx
@@ -107,7 +111,12 @@ alias dl='tail -f log/development.log'
 
 # Cd into Rev site directory, set up ruby, rails, and start mysql 
 alias rev='cd ~/FormFx/rev;rvm use 1.8.7-p334;rvm gemset use rev;mysql.server start'
-alias rvm-rev='cd ~/FormFx/rev;rvm use 1.8.7-p334@rev'
+alias rvm-rev='cd ~/FormFx/rev;rvm use 1.8.7@rev'
+
+
+# MySQL
+export PATH=/usr/local/mysql/bin:$PATH
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 # Vim crashing fix. Source: https://github.com/robgleeson/hammer.vim/issues/22
 mvim()
