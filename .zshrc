@@ -97,6 +97,8 @@ alias rvm187='rvm use 1.8.7@rev'
 alias mongo='sudo /usr/local/Cellar/mongodb/2.0.2-x86_64/bin/mongod'
 alias mongo_shell='sudo /usr/local/Cellar/mongodb/2.0.2-x86_64/bin/mongo'
 
+# Heroku
+alias ph='git push heroku master'
 
 # Nginx
 alias nginxconf='sudo vim /opt/nginx/conf/nginx.conf'

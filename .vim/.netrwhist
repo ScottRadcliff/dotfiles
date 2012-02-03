@@ -1,9 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/Scott/FormFX/CatalogCart'
-let g:netrw_dirhist_2='/Users/Scott/Projects/ProgrammersNotebook/app/controllers'
-let g:netrw_dirhist_3='/Users/Scott/Projects/ProgrammersNotebook/app'
-let g:netrw_dirhist_4='/Users/Scott/Projects/ProgrammersNotebook'
-let g:netrw_dirhist_5='/Users/Scott/Projects/ProgrammersNotebook/app'
-let g:netrw_dirhist_6='/Users/Scott/Projects/ProgrammersNotebook'
-let g:netrw_dirhist_7='/Users/Scott/Projects/ProgrammersNotebook/config'
+let g:netrw_dirhist_cnt =0
