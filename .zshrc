@@ -29,50 +29,30 @@ setopt prompt_subst
 #RPROMPT='%F{blue}$PWD%{$reset_color%}'
 PROMPT=' %F{blue}%1d%{$reset_color%}${vcs_info_msg_0_}%F{blue}%(?/%F{blue}/%F{red})%{$reset_color%} %% '
 
-
-
-
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-#
-# On My Zsh
-# Path to your oh-my-zsh configuration.
-#export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#export ZSH_THEME="robbyrussell"
-
-# Set to this to use case-sensitive completionCK RIGHT POINTING INDEX
-# export CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-#plugins=(git)
-
-#source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias nginx='sudo /opt/nginx/sbin/nginx'
 alias ss='script/server'
 alias sc='script/console'
-alias cs='cap staging deploy'
+alias cpd='cap production deploy'
 alias gps='git push github staging'
 alias rs='rails server'
 alias be='bundle exec'
 alias restart='touch tmp/restart.txt'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -lpGhaF'
+alias s='subl'
+
+# Projects
+alias ct='cd ~/sfc/ctsamples'
+alias rev='cd ~/sfc/rev'
+alias epc='cd ~/sfc/epc-dreamdesigner'
+alias vps='cd ~/sfc/vps'
+
 
 # GIT
 alias gp='git pull'
@@ -86,14 +66,14 @@ alias gd='git diff --color'
 alias ga='git add .'
 alias gl='git log -n 20 --oneline --color'
 alias gm='git merge'
-
+alias gbm='git branch --merged'
+alias grr='git remote rename origin github'
+alias gcv='git commit -av'
 
 # RVM
 alias rvm187='rvm use 1.8.7@rev'
 
 # Mongo
-#alias mongo='~/data/mongo/bin/mongod '
-#alias mongo_shell="~/data/mongo/bin/mongo"
 alias mongo='sudo /usr/local/Cellar/mongodb/2.0.2-x86_64/bin/mongod'
 alias mongo_shell='sudo /usr/local/Cellar/mongodb/2.0.2-x86_64/bin/mongo'
 
@@ -112,8 +92,8 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop'
 alias dl='tail -f log/development.log'
 
 # Cd into Rev site directory, set up ruby, rails, and start mysql 
-alias rev='cd ~/FormFx/rev;rvm use 1.8.7-p334;rvm gemset use rev;mysql.server start'
-alias rvm-rev='cd ~/FormFx/rev;rvm use 1.8.7@rev'
+# alias rev='cd ~/SFC/rev;rvm use 1.8.7-p334;rvm gemset use rev;mysql.server start'
+alias rvm-rev='cd ~/SFC/rev;rvm use 1.8.7@rev'
 
 
 # MySQL
