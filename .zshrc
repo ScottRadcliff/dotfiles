@@ -46,13 +46,14 @@ alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -lpGhaF'
 alias s='subl'
+alias c='clear'
 
 # Projects
 alias ct='cd ~/sfc/ctsamples'
 alias rev='cd ~/sfc/rev'
 alias epc='cd ~/sfc/epc-dreamdesigner'
 alias vps='cd ~/sfc/vps'
-
+alias ext='cd ~/sfc/exteriasamples'
 
 # GIT
 alias gp='git pull'
@@ -60,7 +61,7 @@ alias pgh='git push github master'
 alias gc='git commit'
 alias gco='git checkout'
 alias ge='git commit -am "Quick commit, nothing to see here."' # Git commit - needs to be refactored to allow a message to be passed
-alias gs='git status'
+alias gits='git status'
 alias gb='git branch'
 alias gd='git diff --color'
 alias ga='git add .'
