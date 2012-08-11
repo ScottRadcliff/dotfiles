@@ -117,7 +117,7 @@ snippet head
 snippet title
 	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
 snippet script
-	<script type="text/javascript" charset="utf-8">
+	<script type="text/javascript">
 		${1}
 	</script>${2}
 snippet scriptsrc
@@ -162,7 +162,7 @@ snippet form
 	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
 	</form>
 snippet h1
-	<h1 id="${1:heading}">${2:$1}</h1>
+	<h1>${1}</h1>
 snippet input
 	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
 snippet label
@@ -178,14 +178,18 @@ snippet opt
 snippet optt
 	<option>${1:option}</option>${2}
 snippet select
-	<select name="${1:some_name}" id="${2:$1}">
-		<option value="${3:option}">${4:$3}</option>
-	</select>${5}
+	<select name="${1:some_name}">
+		<option value="${2:option}">${3}</option>
+	</select>
 snippet table
-	<table border="${1:0}">
-		<tr><th>${2:Header}</th></tr>
-		<tr><th>${3:Data}</th></tr>
-	</table>${4}
+	<table>
+		<tr><th>${1:Header}</th></tr>
+		<tr><th>${2:Data}</th></tr>
+	</table>${3}
+snippet tr
+	<tr>${1}</tr>
+snippet td
+	<td>${1}</td>
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 snippet p
@@ -194,3 +198,11 @@ snippet br
 	<br>
 snippet a
 	<a href="${1}">${2}</a>
+snippet hr
+	<hr>
+snippet ul
+	<ul>
+		<li>${1}</li>${2}
+	</ul>
+snippet li
+	<li>${1}</li>${2}
