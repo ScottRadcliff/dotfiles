@@ -38,6 +38,7 @@ source ~/.aliases
 # MySQL
 export PATH=/usr/local/mysql/bin:$PATH
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+export DYLD_LIBRARY_PATH="/usr/local/lib/libtiff.3.dylib:$DYLD_LIBRARY_PATH"
 
 # Vim crashing fix. Source: https://github.com/robgleeson/hammer.vim/issues/22
 mvim()
