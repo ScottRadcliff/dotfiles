@@ -5,6 +5,7 @@ compinit
 promptinit
 
 setopt prompt_subst
+setopt auto_cd
 autoload -U colors && colors
 promptinit
 
@@ -36,6 +37,7 @@ PROMPT=' %F{blue}%1d%{$reset_color%}${vcs_info_msg_0_}%F{blue}%(?/%F{blue}/%F{re
 source ~/.aliases
 
 # MySQL
+export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 export DYLD_LIBRARY_PATH="/usr/local/lib/libtiff.3.dylib:$DYLD_LIBRARY_PATH"
@@ -46,4 +48,4 @@ mvim()
     (unset GEM_PATH GEM_HOME; command mvim "$@")
 }
 
-
+source /Users/Scott/src/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

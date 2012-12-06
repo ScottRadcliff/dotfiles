@@ -14,7 +14,7 @@ alias s='subl'
 alias c='clear'
 
 # Rails
-alias migrate-test='RAILS_ENV=test rake db:migrate'
+alias migrate='rake db:migrate;RAILS_ENV=test rake db:migrate'
 
 # Projects
 alias ct='cd ~/sfc/ctsamples'
@@ -22,6 +22,7 @@ alias rev='cd ~/sfc/rev'
 alias epc='cd ~/sfc/epc-dreamdesigner'
 alias vps='cd ~/sfc/vps'
 alias ext='cd ~/sfc/exteriasamples'
+alias 10p='cd ~/Projects/TenPixels'
 
 # GIT
 alias gp='git pull'
