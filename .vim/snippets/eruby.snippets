@@ -1,21 +1,23 @@
-snippet <
+snippet erb
 	<%= ${1} %>
-	
+snippet end
+	<% end %>${1}
+snippet ff
+	<%= form_for ${1} do |f| %>
+		${2}
+	<% end %>
 snippet if
 	<% if ${1:condition} %>
 		${2}
 	<% end %>
-
 snippet each
 	<% ${1}.each do |${2:variable}| %>
 		${3}
 	<% end %>
-
 snippet lt
 	<%= link_to "${1:title}", ${2:url} %>
-
 snippet img
 	<%= image_tag ${1:path} %>
-
 snippet de
 	<%= debug ${1} %>
+

@@ -30,11 +30,17 @@ setopt prompt_subst
 #RPROMPT='%F{blue}$PWD%{$reset_color%}'
 PROMPT=' %F{blue}%1d%{$reset_color%}${vcs_info_msg_0_}%F{blue}%(?/%F{blue}/%F{red})%{$reset_color%} %% '
 
+
+#Editor
+
+export EDITOR=vim
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 # Aliases
 source ~/.aliases
+source ~/.project_aliases
 
 # MySQL
 export PATH=/usr/local/bin:$PATH
@@ -49,3 +55,6 @@ mvim()
 }
 
 source /Users/Scott/src/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
