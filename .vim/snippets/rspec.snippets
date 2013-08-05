@@ -4,7 +4,7 @@ snippet spechelper
 
 # describe
 snippet des
-	describe ${1:description}" do
+	describe "${1:description}" do
 		${2}
 	end
 snippet desc
@@ -55,3 +55,6 @@ snippet sheq
 snippet shbe
 	${1:target}.should be_${2:result}
 
+#expect
+snippet exp
+	expect(${1:condition}).to ${2:result}

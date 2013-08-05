@@ -27,7 +27,6 @@ precmd () {
  }
   
 setopt prompt_subst
-#RPROMPT='%F{blue}$PWD%{$reset_color%}'
 PROMPT=' %F{blue}%1d%{$reset_color%}${vcs_info_msg_0_}%F{blue}%(?/%F{blue}/%F{red})%{$reset_color%} %% '
 
 
@@ -58,3 +57,13 @@ source /Users/Scott/src/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
+
+bindkey '^r' history-incremental-search-backward
+
+
+# Ruby 2.0 SSL hack
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt

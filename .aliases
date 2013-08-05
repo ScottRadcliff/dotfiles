@@ -11,6 +11,7 @@ alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -lpGhaF'
 alias s='subl'
+alias sub='subl .'
 alias c='clear'
 
 # Rails
@@ -25,8 +26,8 @@ alias ge='git commit -am "Quick commit, nothing to see here."' # Git commit - ne
 alias gst='git status'
 alias gb='git branch'
 alias gd='git diff --color'
-alias ga='git add .'
-alias gl='git log -n 20 --oneline --color'
+alias ga='git add'
+alias gl='git log -n 20 --oneline --color --decorate'
 alias gm='git merge'
 alias gbm='git branch --merged'
 alias grr='git remote rename origin github'
@@ -56,3 +57,10 @@ alias dl='tail -f log/development.log'
 
 # Cd into Rev site directory, set up ruby, rails, and start mysql 
 alias rvm-rev='cd ~/SFC/rev;rvm use 1.8.7@rev'
+
+
+# Tmux
+alias ta='tmux attach -t'
+alias tl='tmux ls'
+alias tn='tmux new -s'
+
