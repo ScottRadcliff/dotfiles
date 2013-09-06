@@ -1,5 +1,4 @@
 # Some useful Unicode entities
-# Non-Breaking Space
 snippet nbs
 	&nbsp;
 # ←
@@ -117,15 +116,15 @@ snippet head
 snippet title
 	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
 snippet script
-	<script type="text/javascript">
+	<script>
 		${1}
 	</script>${2}
 snippet scriptsrc
 	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
 snippet style
-	<style type="text/css" media="${1:screen}">
-		${2}
-	</style>${3}
+	<style type="text/css">
+		${1}
+	</style>
 snippet base
 	<base href="${1}" target="${2}"`Close()`>
 snippet r
@@ -226,3 +225,5 @@ snippet header
 	<header>${1}</header>
 snippet img
 	<img src="${1:location}" alt="${2:name}" />${3}
+snippet strong
+	<strong>${1}</strong>
