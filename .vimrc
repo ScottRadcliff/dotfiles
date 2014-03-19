@@ -2,6 +2,8 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+
+
 "----------------------------------------
 " General Settings
 " --------------------------------------
@@ -25,7 +27,7 @@ set wildmode=list:longest " Tab completion
 set gfn=Monaco:h14
 set shell=/bin/bash
 set cmdheight=2
-set wrap
+set nowrap
 setlocal spell spelllang=en_us
 set nospell
 set list
@@ -62,22 +64,26 @@ set mouse=a
 let mapleader=","
 map <leader>f :filetype detect<cr>
 map <Leader>rs :call ReloadAllSnippets()
-map <leader>s :Scratch
+map <leader>sc :Scratch<Enter>
 map <leader>v :e ~/.vimrc<Enter>
 nmap <leader>a :Ack
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-map <leader>bg :cd ~/Dropbox/blog<CR>
 map <leader>wc g<C-G>
+map <leader>sn :NERDTree ~/.vim/snippets<CR>
+
+" Git mappings
+map <leader>gs :Gstatus<CR>
+map <leader>gc :Gcommit -v<CR>
+map <leader>qc :!git commit -am "Quick Commit"
+
+
 
 " Remove all semi-colons from the file.
 " Useful when pasting styles from the Chrome Web Inspector
 map <leader>; :%s/;//g
-
-" Quick commit with Git
-map <leader>gc :!git commit -am ""
 
 
 " Make tabs easier to use
@@ -104,8 +110,15 @@ let g:NERDTreeHighlightCursorline=0 " That line in the NERDTree windows is irrit
 " Thanks Square https://github.com/square/maximum-awesome/blob/master/vimrc#L61
 map <silent> <leader>sv :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" Insert Mode Key Mappings
 imap jj <Esc>
 imap <Leader><Tab> <C-p>
+
+" Jump to next space
+imap <C-e> <esc>f<space>i
+
+" Jump to end of the line
+imap <C-l> <esc>A
 
 " Buffers.
 nmap <Leader>b :CtrlPBuffer<Enter>
@@ -122,8 +135,8 @@ if has("gui_running")
   set guioptions=egmrt
   " theme
   set t_Co=256
- colorscheme solarized
- set background=light
+ colorscheme twilight
+ " set background=light
 endif 
 
 " colorscheme tomorrow-night
@@ -152,13 +165,12 @@ let g:ctrlp_working_path_mode = 0
 
 
 " Anything from 232 - 255 for the BG is good  via http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
-" hi CursorLine cterm=NONE ctermbg=233 
-hi CursorLine cterm=NONE ctermbg=lightgrey
+hi CursorLine cterm=NONE ctermbg=233 
+" hi CursorLine cterm=NONE ctermbg=lightgrey
 set cursorline
 " autocmd WinEnter * setlocal cursorline
 " autocmd WinLeave * setlocal nocursorline
 
-set statusline=%f%m%y\ \ %{rvm#statusline()}\ \ %{fugitive#statusline()}\ \%=%l,%c\ \ \%P
 
 
 "--------------------------------------------------------------------------------
