@@ -62,6 +62,7 @@ set mouse=a
 " Key Mappings
 " ----------------------------------------
 let mapleader=","
+set timeoutlen=500
 map <leader>f :filetype detect<cr>
 map <Leader>rs :call ReloadAllSnippets()
 map <leader>sc :Scratch<Enter>
@@ -110,7 +111,10 @@ let g:NERDTreeHighlightCursorline=0 " That line in the NERDTree windows is irrit
 " Thanks Square https://github.com/square/maximum-awesome/blob/master/vimrc#L61
 map <silent> <leader>sv :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+
+
 " Insert Mode Key Mappings
+" ---------------------------------------------------------
 imap jj <Esc>
 imap <Leader><Tab> <C-p>
 
@@ -128,6 +132,11 @@ map <leader>d :Dispatch rspec %<cr>
 
 
 
+
+" Normal Mode Key Mappings
+" ---------------------------------------------------------
+nmap nt :tabnew<enter>
+nmap nxt :tabn<enter>
 
 " Hide the menu bar and set the theme if in GUI
 if has("gui_running")
@@ -151,7 +160,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
 " Set up markdown files. Need to reset number and remove them because of
 " relative number
-autocmd BufNewFile,BufRead *.md set filetype=markdown tw=80 spell number nonumber
+autocmd BufNewFile,BufRead *.md set filetype=markdown spell number nonumber
 autocmd BufNewFile,BufRead *.txt set filetype=txt tw=101
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 autocmd BufNewFile,BufRead *_spec.rb set filetype=ruby.rspec
